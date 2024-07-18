@@ -61,7 +61,7 @@ export const App = () => {
 
 
     const fetchDataByCoords = (latitude, longitude) => {
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${unit}&appid=f03bc583c9cab0b94cb11dc8b6fce81c`)
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${unit}&appid=API_KEY`)
             .then((response) => {
                 setData(response.data)
             })
@@ -72,7 +72,7 @@ export const App = () => {
 
 
     const fetchDataByLocation = () => {
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=${unit}&appid=f03bc583c9cab0b94cb11dc8b6fce81c`)
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=${unit}&appid=API_KEY`)
             .then((response) => {
                 setData(response.data)
             })
